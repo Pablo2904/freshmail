@@ -2,23 +2,20 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { connect } from 'react-redux'
 
-import { commentsService } from '../../services/commentsService'
-import {getAllComments} from '../../redux/comments/operations'
-
+import { getAllComments } from '../../redux/comments/operations'
 
 const StyledDiv= styled.div`
   background: ${({ theme }) => theme.colors.black };
   margin: 50px auto;
+  padding: 30px;
   width: 90%;
-  padding: 20px;
-`
+  min-height: 100vh;
+  `
 
-const Main = ({ children, comments, getAllComments }) => {
-  console.log(comments, getAllComments)
+const Main = ({ children, getAllComments }) => {
   useEffect(() => {
     getAllComments()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [getAllComments])
 
   return (
     <main>
@@ -28,12 +25,9 @@ const Main = ({ children, comments, getAllComments }) => {
     </main>
   )
 }
-const mapStateToProps = (state) => ({
-  comments: state.comments
-})
 
 const mapDispatchToProps = dispatch => ({
   getAllComments: () => dispatch(getAllComments())
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main)
+export default connect(null, mapDispatchToProps)(Main)

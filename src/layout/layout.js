@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
 const StyledWrapper = styled.div`
   background: ${({ theme }) => theme.colors.purple };
   color: ${({ theme }) => theme.colors.creamy };
-  height: ${({ theme }) => theme.screenHeight.full };
+  padding-bottom: 100px;
   ${({theme}) => theme.flex};
 `
 
