@@ -9,7 +9,7 @@ const CommentsSelected = () => {
       <Header>
         Lista wybranych komentarzy
       </Header>
-      <CommentsList buttonContent='Usuń z ulubionych' noDataContent='Brak wybranych komentarzy' selected={false} />
+      <CommentsList buttonContent='Usuń z ulubionych' noDataContent='Brak wybranych komentarzy' />
     </>
   )
 }

@@ -7,7 +7,7 @@ const Comments = () => {
   return (
     <>
       <Header>Lista komentarzy</Header>
-      <CommentsList buttonContent='Dodaj do wybranych' noDataContent='Ładowanie...' selected  selectHandler/>
+      <CommentsList buttonContent='Dodaj do wybranych' noDataContent='Ładowanie...' regularList />
     </>
   )
 }

@@ -12,10 +12,10 @@ const LoadingContainer = styled.div`
   font-size: 2rem;
 `
 
-const CommentsList = ({ comments, handleSelected, buttonContent, selected, noDataContent, selectHandler }) => {
+const CommentsList = ({ comments, handleSelected, buttonContent, regularList, noDataContent }) => {
   let commentsList = [...comments]
 
-  if (!selected) {
+  if (!regularList) {
     commentsList = comments.filter(comment => comment.selected)
   }
 
@@ -29,8 +29,8 @@ const CommentsList = ({ comments, handleSelected, buttonContent, selected, noDat
                 key={comment.id}
                 comment={comment}
                 buttonContent={buttonContent}
-                onClickHandler={() => commentHandler(comment, comments, selected, handleSelected)}
-                selectHandler={selectHandler}
+                onClickHandler={() => commentHandler(comment, comments, regularList, handleSelected)}
+                selectHandler={regularList}
               />
             )
           })

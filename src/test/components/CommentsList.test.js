@@ -31,7 +31,7 @@ describe('CommentsList', () => {
     wrapper = mount(
       <Provider store={store} >
         <ThemeProvider theme={theme}>
-          <CommentsList selected />
+          <CommentsList regularList />
         </ThemeProvider>
       </Provider>
     )
@@ -45,7 +45,7 @@ describe('CommentsList', () => {
     wrapper = mount(
       <Provider store={storeEmpty} >
         <ThemeProvider theme={theme}>
-          <CommentsList selected noDataContent='No data'/>
+          <CommentsList regularList noDataContent='No data'/>
         </ThemeProvider>
       </Provider>
     )
@@ -59,7 +59,7 @@ describe('CommentsList', () => {
     wrapper = mount(
       <Provider store={store} >
         <ThemeProvider theme={theme}>
-          <CommentsList selected/>
+          <CommentsList regularList/>
         </ThemeProvider>
       </Provider>
     )
