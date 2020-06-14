@@ -2,6 +2,7 @@
   "name": "freshmail",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "axios": "^0.19.2",
     "react": "^16.13.1",
@@ -39,7 +40,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "jest-styled-components": "^7.0.2",
-    "react-test-renderer": "^16.13.1",
-    "redux-devtools-extension": "^2.13.8"
+    "redux-devtools-extension": "^2.13.8",
+    "redux-mock-store": "^1.5.4"
   }
 }

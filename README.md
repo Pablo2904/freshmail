@@ -1,8 +1,31 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
-## Available Scripts
+## Dla sprawdzajacego
 
-In the project directory, you can run:
+Apka jest zbudowana za pomoca Create-React-App, do odpalenia potrzebne standardowe rzeczy typun NodeJS i yarn.
+
+
+Odpalić sobie mozna instalujac wszystko komenda `yarn` a nastepnie za pomoca `yarn start`.
+Testy za pomocą `yarn test`.
+
+
+Po odpaleniu apki wykonuje sie zapytanie o 20 komentarzy. Wyświetlaja sie na stronie głównej.
+Komentarz ma przycisk dzieki któremu mozemy go oddać do ulubionych, po dodaniu przycisk jest dezaktywowany.
+na Karcie ulubionych mozemy usunac komentarz z tej karty.
+
+
+Na ostatnim widoku mona dodać nowy komentarz, zainstalowałem bibliotekę do formualrzy w celu obsłuenia, dodana walidacja według wymagań.
+Przy podaniu błędnych danych input ma border czerwony, w przypadku jak wszystko jest ok, inputy się czyszczą i zostaje dodany nowy komentarz,
+który ju czeka na stronie głównej.
+
+
+Dodałem równie kilka testów i dodatkowe biblioteki które były potrzbne do działania (enzyme, jest-styled itp.). Jest jest juz w pakiecie z CRA.
+Testy obejmują rózne rzeczy, tzn zwykle elementy, style ze styled, wywolywanie funkcji, czy funkcji ze store'a reduxowego
+
+
+Ok, chyba wszystko, na koniec powiem ze wszystko działa zgodnie z wytycznymi które dostałem.
+Bardzo bym prosił o w miarę szybką odpowiedź :)
+
 
 ### `yarn start`
 

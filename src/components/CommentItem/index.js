@@ -1,9 +1,7 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import styled from 'styled-components'
-import { connect } from 'react-redux'
 
 import { Button } from '../Button'
-import commentsActions from '../../redux/comments/actions'
 
 const Container = styled.div`
   padding: 10px;
@@ -26,9 +24,9 @@ const StyledP = styled.p`
 `
 
 const CommentItem = ({ comment, buttonContent, onClickHandler, selectHandler }) => {
-  const handleBody = () => {
+  const handleBody = useCallback(() => {
     return comment.body && comment.body.length > 20 ? `${comment.body.substring(0,20)}...` : comment.body 
-  }
+  }, [comment.body])
 
   return (
     <section>
@@ -50,12 +48,4 @@ const CommentItem = ({ comment, buttonContent, onClickHandler, selectHandler }) 
   )
 }
 
-const mapDispatchToProps = dispatch => ({
-  addToSelected: comments => dispatch(commentsActions.addComments(comments))
-})
-
-const mapStateToProps = state => ({
-  comments: state.comments
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(CommentItem)
+export default (CommentItem)
