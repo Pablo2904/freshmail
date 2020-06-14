@@ -1,19 +1,32 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+import styled from 'styled-components'
 
-import { NavLink, useLocation } from 'react-router-dom'
+import { Button } from '../../components/Button'
+import Header from '../../components/Header'
+
+const Container = styled.div`
+  ${({ theme }) => theme.flexColumn };
+  ${({ theme }) => theme.flexCenter };
+`
+
+const Text = styled.span`
+  color: ${({ theme }) => theme.colors.black };
+`
 
 export const Error = () => {
-  const location = useLocation()
   return (
-    <div>
-      <h2>
-        No match for <code>{location.pathname}</code>
-      </h2>
-      <div>
+    <Container>
+      <Header>
+        Strona o podanym adresie nie istnieje :(
+      </Header>
+      <Button>
         <NavLink to={''}>
-          Back to Comments
+          <Text>
+            Wróć na stronę główną
+          </Text>
         </NavLink>
-      </div>
-    </div>
+      </Button>
+    </Container>
   )
 }

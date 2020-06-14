@@ -28,6 +28,7 @@ const StyledWrapper = styled.div`
   background: ${({ theme }) => theme.colors.purple };
   color: ${({ theme }) => theme.colors.creamy };
   padding-bottom: 100px;
+  min-height: 100vh;
   ${({theme}) => theme.flex};
 `
 

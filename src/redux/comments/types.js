@@ -1,5 +1,7 @@
 const ADD_COMMENTS = 'ADD_COMMENTS'
+const ADD_COMMENT = 'ADD_COMMENT'
 
 export default {
-  ADD_COMMENTS
+  ADD_COMMENTS,
+  ADD_COMMENT
 }

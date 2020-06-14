@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import { connect } from 'react-redux'
 
 import { Button } from '../Button'
+import commentsActions from '../../redux/comments/actions'
 
 const Container = styled.div`
   padding: 10px;
@@ -23,7 +25,7 @@ const StyledP = styled.p`
   margin-right: 20px;
 `
 
-export const CommentItem = ({ comment }) => {
+const CommentItem = ({ comment, buttonContent, onClickHandler, selectHandler }) => {
   const handleBody = () => {
     return comment.body.length > 20 ? `${comment.body.substring(0,20)}...` : comment.body 
   }
@@ -39,11 +41,21 @@ export const CommentItem = ({ comment }) => {
           <StyledP>
             {handleBody()}
           </StyledP>
-          <Button onClickHandler={() => console.log(comment.id)} disabled>
-            Dodaj do wybranych
+          <Button onClickHandler={() => onClickHandler()} disabled={selectHandler && comment.selected}>
+            {selectHandler &&  comment.selected ? 'Dodano' : buttonContent}
           </Button>
         </Body>
       </Container>
     </section>
   )
 }
+
+const mapDispatchToProps = dispatch => ({
+  addToSelected: comments => dispatch(commentsActions.addComments(comments))
+})
+
+const mapStateToProps = state => ({
+  comments: state.comments
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(CommentItem)

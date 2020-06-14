@@ -1,8 +1,8 @@
-import { commentsService } from '../../services/commentsService'
+import { getAllCommentsService } from '../../services/commentsService'
 import actions from './actions'
 
 const fetchComments = async () => {
-  const response = await commentsService()
+  const response = await getAllCommentsService()
 
   return response.data
 }

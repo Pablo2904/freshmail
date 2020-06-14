@@ -1,11 +1,16 @@
 import React from 'react'
 
+import Form from '../../components/Form'
+import Header from '../../components/Header'
+
 const CommentsNew = () => {
   return (
-    <div>
-      tu formualr zn nowy
-    </div>
-  )
+    <>
+      <Header>
+        Dodaj nowy komentarz
+      </Header>
+      <Form />
+    </>
+  );
 }
-
 export default CommentsNew

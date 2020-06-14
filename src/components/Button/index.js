@@ -7,18 +7,20 @@ const StyledButton = styled.button`
   background: ${({ theme }) => theme.colors.orange };
   border: none;
   outline: none;
-  cursor: pointer;
 
   :hover {
     background: ${({ theme }) => theme.colors.orangeDark };
-    cursor: default;
+    cursor: pointer;
   }
 
   ${props => props.disabled && css`
     background: ${({ theme }) => theme.colors.grey };
     color: ${({ theme }) => theme.colors.black };
-    cursor: not-allowed;
     pointer-events: none;
+
+    &:hover {
+      background: ${({ theme }) => theme.colors.grey };
+    }
   `};
 `
 
@@ -26,9 +28,9 @@ const Body = styled.div`
   font-weight: bold;
 `
 
-export const Button = ({ onClickHandler, children, disabled }) => {
+export const Button = ({ onClickHandler, children, type, disabled }) => {
   return (
-    <StyledButton onClick={onClickHandler} disabled={disabled}>
+    <StyledButton onClick={onClickHandler} disabled={disabled} type={type}>
       <Body>
         {children}
       </Body>

@@ -9,7 +9,6 @@ const StyledDiv= styled.div`
   margin: 50px auto;
   padding: 30px;
   width: 90%;
-  min-height: 100vh;
   `
 
 const Main = ({ children, getAllComments }) => {

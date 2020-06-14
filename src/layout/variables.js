@@ -7,6 +7,7 @@ export const colors = {
   purpleLight: '#8a5f86',
   orange: '#ff9c71',
   orangeDark: '#d6754b',
+  red: '#d12f0a',
   yiellow: '#fbd46d',
   creamy: '#e8ead3'
 }
