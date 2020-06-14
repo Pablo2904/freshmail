@@ -41,6 +41,7 @@ const Form = ({ comments, addComment }) => {
     const { name, email, body } = data
     const commentsCopy = [...comments]
     const nextId = (commentsCopy && commentsCopy.sort((a,b) => b.id - a.id)[0].id) + 1 || 0
+
     addComment(
       {
         name,

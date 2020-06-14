@@ -5,7 +5,7 @@ export const menuConfiguration = [
   },
   {
     href: '/comments/selected',
-    title: 'Wybrane komentarz',
+    title: 'Wybrane komentarze',
   },
   {
     href: '/comments/new',

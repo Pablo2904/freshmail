@@ -27,7 +27,7 @@ const StyledP = styled.p`
 
 const CommentItem = ({ comment, buttonContent, onClickHandler, selectHandler }) => {
   const handleBody = () => {
-    return comment.body.length > 20 ? `${comment.body.substring(0,20)}...` : comment.body 
+    return comment.body && comment.body.length > 20 ? `${comment.body.substring(0,20)}...` : comment.body 
   }
 
   return (
