@@ -29,7 +29,6 @@ const StyledWrapper = styled.div`
   color: ${({ theme }) => theme.colors.creamy };
   padding-bottom: 100px;
   min-height: 100vh;
-  ${({theme}) => theme.flex};
 `
 
 export const Layout = ({ children }) => {

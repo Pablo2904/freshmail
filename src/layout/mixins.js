@@ -12,11 +12,6 @@ export const flexStart = css`
   align-items: center;
 `
 
-export const flexSpaceBeetwen = css`
-  display: flex;
-  justify-content: space-between;
-`
-
 export const flexColumn = css`
   display: flex;
   flex-direction: column;
